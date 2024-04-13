@@ -1,0 +1,182 @@
+/* Ajoutez ou modifiez ces styles dans votre fichier SCSS */
+
+// Conteneur principal du formulaire
+.signup-form-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(251, 251, 246);
+
+  .signup-image-section,
+  .signup-form-section {
+    flex: 1;
+  }
+
+  .signup-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Change background color for image section */
+    max-width: 50%; // L'image occupera initialement la moitié de la page
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none; // Sur les écrans plus petits, masquer l'image pour laisser plus de place au formulaire
+    }
+  }
+
+  .signup-form-section {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; // Le formulaire occupera initialement la moitié de la page
+
+    @media screen and (max-width: 768px) {
+      width: 100%; // Sur les écrans plus petits, le formulaire occupera toute la largeur
+    }
+  }
+}
+
+// Formulaire d'inscription
+.signup-form {
+  width: 100%; // Le formulaire occupera toute la largeur de son conteneur
+  max-width: 600px; // Limitez la largeur du formulaire pour le rendre plus lisible
+  background-color: #1b4242; /* Change background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+// Groupe de champs du formulaire
+.signup-form-group {
+  margin-bottom: 20px;
+}
+
+
+// Étiquette du champ du formulaire
+.signup-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff; // Change label text color to white
+  text-align: center; // Center the text in labels
+}
+
+// Champ du formulaire
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff; // Add white border
+  border-radius: 10px;
+  box-sizing: border-box;// Change input text color to white
+  text-align: center;
+  color: white;
+  background-color: #1b4242; 
+  // Center the text in inputs
+}
+.signup-bar-below-header {
+  width: 100%;
+  height: 1px;
+  background-color: white; // Change la couleur de la barre en blanc
+  margin-bottom: 20px;
+}
+// Bouton du formulaire
+.signup-button {
+  font-weight: bold;
+  background-color:white;
+  color: #1b4242;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px; /* Ajout de la marge en bas pour séparer du bloc suivant */
+
+  &:hover {
+    background-color: #e7f7f7;
+  }
+}
+
+.social-signup {
+  /* Common styles for both buttons */
+  background-color: #fff; /* White background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for content */
+  margin: 5px; /* Margin for spacing */
+  cursor: pointer; /* Indicate clickable behavior */
+  display: inline-flex; /* Allow icons and text to align horizontally */
+  align-items: center; /* Vertically center content */
+  font-weight: bold; /* Bold text */
+  
+  /* Icon styles */
+  .fa-brands {
+    margin-right: 10px; /* Space between icon and text */
+  }
+}
+
+/* Optional styles for individual buttons */
+.google-signup {
+  background-color: #dd4b39; /* Google red */
+  color: #fff; /* White text */
+}
+
+.facebook-signup {
+  background-color: #3b5998; /* Facebook blue */
+  color: #fff; /* White text */
+}
+
+// Barre séparatrice
+.signup-bar-below-header {
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+// Section des boutons sociaux
+.signup-social-section {
+  text-align: center; /* Centrer les éléments sociaux */
+  margin-top: 20px; /* Ajout de la marge en haut pour séparer du bloc précédent */
+
+  p {
+    font-size: 14px; /* Taille de police ajustée */
+    color: #666; /* Couleur de texte grise pour un look plus subtil */
+    margin-bottom: 10px; /* Espace en bas du paragraphe */
+  }
+
+  .signup-social-buttons {
+    display: flex;
+    flex-direction: column;
+     /* Afficher les boutons verticalement */
+    
+  }
+
+  .signup-social-buttons button {
+    padding: 12px; // Augmenter la taille des boutons
+    
+    border-radius: 8px; // Coins arrondis
+    color: white; // Texte blanc
+    font-size: 16px; // Taille de police
+    font-weight: bold; // Texte en gras
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .signup-social-buttons button:hover {
+    filter: brightness(90%); // Légère variation de luminosité au survol
+  }
+
+  .signup-social-buttons button svg {
+    margin-right: 15px; // Espacement entre l'icône et le texte
+  }
+}

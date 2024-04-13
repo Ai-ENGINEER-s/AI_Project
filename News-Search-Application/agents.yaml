@@ -1,0 +1,39 @@
+framework: crewai
+topic: Give me the latest news about OPENAI
+roles:
+  news_analyst:
+    backstory: Experienced in analyzing news trends and extracting key information.
+    goal: Analyze latest news updates
+    role: News Analyst
+    tasks:
+      news_summary_extraction:
+        description: Extract the latest news updates about OPENAI from reputable news
+          websites.
+        expected_output: Summary report with key information on OPENAI news.
+    tools:
+    - 'SerperDevTool'
+    - ScrapeWebsiteTool
+  report_writer:
+    backstory: Proficient in writing detailed reports based on gathered information.
+    goal: Summarize and document news findings
+    role: Report Writer
+    tasks:
+      report_generation:
+        description: Summarize the analyzed news updates into a cohesive report for
+          further review.
+        expected_output: Structured report document highlighting key points on OPENAI
+          news.
+    tools:
+    - ''
+  research_lead:
+    backstory: Experienced in overseeing research tasks and compiling detailed reports.
+    goal: Lead research efforts and final output
+    role: Research Lead
+    tasks:
+      final_output_generation:
+        description: Compile the summarized news reports into a final comprehensive
+          document.
+        expected_output: Complete document with the latest news about OPENAI.
+    tools:
+    - ''
+dependencies: []
