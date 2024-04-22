@@ -53,10 +53,6 @@ so 0 means that your LLM gonna be no straighforward not creative , you can make 
 Learning Resources : 
 
 
-# https://youtu.be/sVcwVQRHIc8?si=8621T3JrJOcMSGce
-
-# https://youtu.be/lG7Uxts9SXs?si=s4jNGJ3mMsX3u0ip
-
 
 
 **chunk_overlap** :  that's mean when document get splitted in chunks by example let's suppose that our chunk_overlap = 100 , this means that the firt document will have his last hundred words included int the document two first hundred words 
