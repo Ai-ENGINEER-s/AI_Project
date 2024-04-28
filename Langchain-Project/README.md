@@ -56,3 +56,72 @@ Learning Resources :
 
 
 **chunk_overlap** :  that's mean when document get splitted in chunks by example let's suppose that our chunk_overlap = 100 , this means that the firt document will have his last hundred words included int the document two first hundred words 
+
+Text File Loader: Load a simple .txt file into a document.
+
+from langchain.document_loaders import TextLoader
+
+loader = TextLoader("./sample.txt")
+document = loader.load()
+CSV Loader: Load a CSV file into a document.
+
+from langchain.document_loaders.csv_loader import CSVLoader
+
+loader = CSVLoader(file_path='./example_data/sample.csv')
+documents = loader.load()
+We can choose to customize the parsing by specifying field names -
+
+loader = CSVLoader(file_path='./example_data/mlb_teams_2012.csv', csv_args={
+    'delimiter': ',',
+    'quotechar': '"',
+    'fieldnames': ['MLB Team', 'Payroll in millions', 'Wins']
+})
+documents = loader.load()
+PDF Loaders: PDF Loaders in LangChain offer various methods for parsing and extracting content from PDF files. Each loader caters to different requirements and uses different underlying libraries. Below are detailed examples for each loader.
+
+PyPDFLoader is used for basic PDF parsing.
+
+from langchain.document_loaders import PyPDFLoader
+
+loader = PyPDFLoader("example_data/layout-parser-paper.pdf")
+pages = loader.load_and_split()
+MathPixLoader is ideal for extracting mathematical content and diagrams.
+
+from langchain.document_loaders import MathpixPDFLoader
+
+loader = MathpixPDFLoader("example_data/math-content.pdf")
+data = loader.load()
+PyMuPDFLoader is fast and includes detailed metadata extraction.
+
+from langchain.document_loaders import PyMuPDFLoader
+
+loader = PyMuPDFLoader("example_data/layout-parser-paper.pdf")
+data = loader.load()
+
+# Optionally pass additional arguments for PyMuPDF's get_text() call
+data = loader.load(option="text")
+PDFMiner Loader is used for more granular control over text extraction.
+
+from langchain.document_loaders import PDFMinerLoader
+
+loader = PDFMinerLoader("example_data/layout-parser-paper.pdf")
+data = loader.load()
+AmazonTextractPDFParser utilizes AWS Textract for OCR and other advanced PDF parsing features.
+
+from langchain.document_loaders import AmazonTextractPDFLoader
+
+# Requires AWS account and configuration
+loader = AmazonTextractPDFLoader("example_data/complex-layout.pdf")
+documents = loader.load()
+PDFMinerPDFasHTMLLoader generates HTML from PDF for semantic parsing.
+
+from langchain.document_loaders import PDFMinerPDFasHTMLLoader
+
+loader = PDFMinerPDFasHTMLLoader("example_data/layout-parser-paper.pdf")
+data = loader.load()
+PDFPlumberLoader provides detailed metadata and supports one document per page.
+
+from langchain.document_loaders import PDFPlumberLoader
+
+loader = PDFPlumberLoader("example_data/layout-parser-paper.pdf")
+data = loader.load()

@@ -13,7 +13,8 @@ from langchain_cohere import ChatCohere
 dotenv_dir = r"C:\Users\BARRY\Desktop\AI-WorkSpace\Langchain-Project\.env"
 load_dotenv(dotenv_dir)
 
-os.environ["COHERE_API_KEY"] = "IuObZIhokemmxGaOsSXTDDMKmYd3CzNz1A2KSNQC"
+os.environ["COHERE_API_KEY"] = "S9QbqxpOWdxuODvmHUFIZB2buPMuaj68xjaZbbj0"
+
 embeddings = CohereEmbeddings(model="embed-english-light-v3.0")
 
 
@@ -60,4 +61,6 @@ def get_response_from_query(db, query, k=4):
 
     response = chain.run(question=query, docs=docs_page_content)
     response = response.replace("\n", "")
+    
+    
     return response, docs
