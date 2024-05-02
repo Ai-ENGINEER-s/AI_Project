@@ -4,6 +4,7 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv 
 
 doten_dir = r"C:\Users\BARRY\Desktop\AI-WorkSpace\.env"
+
 load_dotenv(doten_dir)
 
 llm = ChatGroq ( model= "mixtral-8x7b-32768", )
