@@ -25,6 +25,7 @@ from langchain_core.prompts import ChatPromptTemplate
 
 # Importing the create_stuff_documents_chain and create_retrieval_chain functions from the langchain library
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_community.embeddings.sentence_transformer import (SentenceTransformerEmbeddings)
 
 # Importing the create_retrieval_chain function
 from langchain.chains import create_retrieval_chain
@@ -83,7 +84,7 @@ def main():
               
                 # Create the OpenAIEmbeddings object
                 
-                embeddings = CohereEmbeddings()
+                embeddings = SentenceTransformerEmbeddings()
                 
                 # Create the FAISS vector store from the text chunks and the OpenAIEmbeddings object
                 openai_vector_store = FAISS.from_texts(

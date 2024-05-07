@@ -5,6 +5,7 @@ from langchain_cohere import CohereEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_cohere import ChatCohere 
+from langchain_groq import ChatGroq
 from langchain_core.pydantic_v1 import BaseModel , Field 
 from dotenv import load_dotenv 
 from langchain import hub 
@@ -21,6 +22,7 @@ from pprint import pprint
 from langchain.schema import Document 
 from langchain.tools import tool 
 import os
+from langchain_community.embeddings.sentence_transformer import (SentenceTransformerEmbeddings)
 
 from components_work_flow.constantes import *
 from components_work_flow.gradeDocument import GradeDocuments
@@ -28,7 +30,7 @@ from  components_work_flow.gradeAnswer import GradeAnswer
 from components_work_flow.gradeDocument import GradeDocuments
 from components_work_flow.gradeHallucination import GradeHallucination 
 
-loader = PyPDFLoader("C:\devpy\playground\Advanced_Rag_Implementation_with_mistral_langchain_Engineers\data\BABOK_Guide_v3_Member_2015.pdf")
+loader = PyPDFLoader("C:/Users/BARRY/Desktop/AI-WorkSpace/advanced-rag/data/BABOK_Guide_v3_Member_2015.pdf")
 pages = loader.load_and_split()
 
 text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
@@ -41,12 +43,12 @@ docs_split = text_splitter.split_documents(pages)
 vectorstore = Chroma.from_documents(
     documents= docs_split,
     collection_name="rag-chroma",
-    embedding=CohereEmbeddings()
+    embedding=SentenceTransformerEmbeddings()
 )
 
 retriever = vectorstore.as_retriever()
 ## Retrieval Grader 
-llm = ChatCohere()  
+llm =ChatGroq(temperature=0, )
 
 structured_llm_grader = llm.with_structured_output(GradeDocuments)
 
