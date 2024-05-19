@@ -1,0 +1,4 @@
+# requirements.txt
+#pip install -U --quiet langchain_community tiktoken langchain-mistralai langchainhub chromadb langchain langgraph tavily-python
+#pip install sentence-transformers
+#pip install pypdf 

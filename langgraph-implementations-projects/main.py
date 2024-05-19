@@ -35,7 +35,7 @@ web_search_tool = TavilySearchResults(k=3, api_key="TAVILY_API_KEY")
 
 
 
-doc_path = r"C:/Users/BARRY/Desktop/AI-WorkSpace/langgraph-implementations-projects/data/BABOK_Guide_v3_Member_2015.pdf"
+doc_path = r"C:\Users\BARRY\Desktop\AI-WorkSpace\langgraph-implementations-projects\data\analyseoptimiséedusystèmeRAG.pdf"
 
 doc_content_load = PyPDFLoader(doc_path).load()
 

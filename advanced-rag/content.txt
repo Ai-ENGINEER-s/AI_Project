@@ -1,0 +1,153 @@
+
+15
+Introduction 3
+Objectif du document 3
+Conventions 3
+Références 3
+Liste des parties prenantes 3
+Glossaire 3
+Fondements du projet 3
+Existant (EX) 4
+Problèmes (PB) 4
+Objectifs (OB) 4
+Besoins (BM) 4
+Acteurs Utilisateurs (AH) 4
+Acteurs Systèmes (AS) 4
+Matrice des rôles et des permissions 4
+Périmètre métier du projet 4
+Concepts métier concernés 4
+Positionnement métier du projet 4
+Concepts métiers - vue objets métier 4
+Concepts métiers - vue intervenants 4
+Concepts métiers - vue processus et notification 4
+Contexte métier concernés 4
+Objets métier concernés 4
+GAP Analysis 4
+Evolution de l’organisation 4
+Hors-périmètre 4
+Enterprise Architect Sample Models for BABOK 5
+Strategy and Planning 5
+Business Analysis Planning 5
+Strategy 5
+Business Case 5
+Contracts 5
+Governance 5
+Risk Analysis 5
+Vendor Analysis 5
+Elicitation and Collaboration 5
+Elicitation Workshops 5
+Focus Groups 5
+Interviews 5
+Mind Maps 5
+Surveys 5
+Business and Processes Modelling 5
+Policies and Business Rules 6
+Business Capabilities 6
+Business Model Canvas 6
+Business Processes 6
+Requirements Modelling 6
+Access and Evaluation Criteria 6
+Business Requirements 6
+Stakeholder Requirements 6
+Functional Requirements 6
+Non-Functional Requirements 6
+Transition Requirements 6
+Business and Systems Analysis 7
+Features 7
+Business Objectives and Measures 7
+Information and Data Analysis 7
+Current State Analysis (Situation actuelle ) 7
+Issues Causes and Decisions 7
+Future State Definition (Situation cible) 7
+Solution Modelling 7
+Solution Evaluation and Options 7
+User Stories and Use Cases 7
+User Interface Prototype 7
+Application Design 7
+Component Lifecycle 7
+Technical Environments 7
+Performance Assessment 7
+Introduction 8
+Contexte des Jeux Olympiques en France 8
+Transition vers des e-tickets pour des raisons de sécurité 9
+Présentation de l'entreprise InfoEvent 10
+Description du projet 11
+Objectifs : architecture logicielle, solution technique, état de l'art des solutions existantes 11
+Analyse du besoin 12
+🐧Fonctionnalités attendues par le client et de leur faisabilité 13
+Analyse de la faisabilité juridique et des données collectées 14
+Conception de la nouvelle architecture 14
+Proposition d'une architecture logicielle adaptée aux volumes élevés de requêtes 14
+État de l'art sur les solutions existantes & Justification des choix technologiques 15
+🐧Diagramme de séquence pour la réservation de billet 16
+Stratégies de sécurisation de l'application 19
+2
+protocoles cryptent les données transmises entre le système de billetterie et l'utilisateur, rendant
+difficile pour les pirates de voler des informations.
+3. Génération de clés cryptées : Pour chaque achat, le système devrait générer une clé cryptée
+unique. Cette clé serait associée au billet électronique et permettrait de vérifier l'authenticité du
+billet lors de son utilisation.
+4. Protection contre les attaques CSRF et XSS : Le système doit également être protégé contre
+les attaques Cross-Site Request Forgery (CSRF) et Cross-Site Scripting (XSS). Ces attaques
+peuvent être évitées en utilisant des jetons anti-CSRF et en mettant en œuvre des politiques de
+sécurité de contenu pour prévenir les attaques XSS.
+5. Gestion des permissions : Le système devrait avoir une matrice de permissions robuste qui
+définit qui a accès à quoi. Cela permettra de prévenir l'accès non autorisé aux informations et
+aux fonctionnalités sensibles du système.
+6. Journalisation et surveillance : Le système devrait avoir des capacités de journalisation et de
+surveillance pour détecter et répondre rapidement à toute activité suspecte.
+Ces mesures de sécurité et d'authentification, si elles sont correctement mises en œuvre,
+contribueront à protéger le système de billetterie contre diverses menaces et à garantir que
+seuls les utilisateurs autorisés ont accès aux informations et aux fonctionnalités appropriées.
+Evolution de l’organisation
+Les changements organisationnels nécessaires pour intégrer ces règles et politiques dans le
+système de réservation peuvent inclure :
+1. Formation et sensibilisation : Il serait nécessaire de former le personnel sur les nouvelles
+règles et politiques et de les sensibiliser à l'importance de la sécurité et de l'authentification
+dans le système de réservation. Cela peut nécessiter la mise en place de sessions de formation
+et de matériel éducatif.
+2. Modifications des processus métier : Les processus métier existants peuvent devoir être
+modifiés pour s'aligner sur les nouvelles règles et politiques. Cela peut inclure des changements
+dans les processus de gestion des réservations, de paiement et de génération de billets
+électroniques.
+3. Mise à jour des systèmes et des technologies : Les systèmes et les technologies existants
+peuvent nécessiter des mises à jour ou des modifications pour intégrer les nouvelles règles et
+politiques. Cela peut inclure des changements dans le système de réservation lui-même, ainsi
+15
+que dans les systèmes connexes tels que le système de paiement et le système de gestion des
+clients.
+4. Changements dans la structure organisationnelle : En fonction de la complexité des
+nouvelles règles et politiques, il peut être nécessaire de créer de nouveaux rôles ou de modifier
+les rôles existants pour assurer la mise en œuvre et la gestion efficaces des nouvelles règles et
+politiques.
+5. Communication : Il est essentiel de communiquer efficacement les changements à toutes les
+parties prenantes concernées. Cela peut inclure la communication interne avec le personnel,
+ainsi que la communication externe avec les clients, les fournisseurs et les partenaires.
+6. Suivi et évaluation : Une fois les nouvelles règles et politiques mises en œuvre, il serait
+nécessaire de mettre en place des mécanismes de suivi et d'évaluation pour s'assurer qu'elles
+sont efficaces et qu'elles sont respectées.
+En utilisant le 'CHANGE MANAGEMENT', ces changements pourraient être planifiés, gérés et
+mis en œuvre de manière efficace et systématique.
+Voici les règles d'affaires formelles pour la génération de clés cryptées et le processus
+d'authentification :
+1. Tous les achats de billets doivent être associés à une clé cryptée unique générée au moment
+de l'achat.
+2. Les clés cryptées doivent être stockées de manière sécurisée dans la base de données du
+système.
+3. Le processus de génération de clés cryptées doit être automatique et ne doit pas nécessiter
+d'intervention manuelle.
+4. Les clés cryptées doivent être utilisées pour authentifier les billets électroniques lors de
+l'entrée à l'événement.
+5. Le système doit pouvoir traiter et valider les clés cryptées à l'entrée de l'événement en temps
+réel.
+6. Les utilisateurs doivent s'authentifier dans le système avant de pouvoir procéder à un achat
+de billet.
+7. L'authentification des utilisateurs doit impliquer un processus en deux étapes comprenant un
+mot de passe et une autre forme de vérification, telle que la confirmation par e-mail ou par
+téléphone.
+8. Les comptes utilisateurs qui échouent à plusieurs reprises dans le processus
+d'authentification doivent être temporairement verrouillés pour prévenir les tentatives de
+piratage.
+9. Tous les changements de mot de passe ou de détails d'authentification doivent être confirmés
+par l'utilisateur via un lien de confirmation envoyé par e-mail.
+16
