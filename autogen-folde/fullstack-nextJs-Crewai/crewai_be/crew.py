@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from agents import CompanyResearchAgents
 from job_manager import append_event
 from tasks import CompanyResearchTasks
-from crewai import Crew
+from sample import Crew
 
 
 class CompanyResearchCrew:

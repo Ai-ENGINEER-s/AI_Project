@@ -1,5 +1,5 @@
 
-from crewai import Agent, Task, Crew
+from sample import Agent, Task, Crew
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
@@ -118,7 +118,7 @@ user_template = '''
 '''
 import os
 import openai
-from crewai import Agent, Task, Crew
+from sample import Agent, Task, Crew
 
 # Configuration de la clé d'API OpenAI
 

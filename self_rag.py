@@ -1,5 +1,5 @@
 import os
-from crewai import Agent, Task, Crew, Process
+from sample import Agent, Task, Crew, Process
 from langchain_groq import ChatGroq 
 from dotenv import load_dotenv 
 

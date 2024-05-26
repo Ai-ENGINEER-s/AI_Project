@@ -1,4 +1,4 @@
-from crewai import Crew
+from sample import Crew
 from dotenv import load_dotenv
 
 from agents import linkedin_scraper_agent, web_researcher_agent, doppelganger_agent

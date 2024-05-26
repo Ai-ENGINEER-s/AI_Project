@@ -1,0 +1,42 @@
+.DS_Store
+
+docs
+.git
+config.json
+Pipfile
+Pipfile.lock
+
+# Cache
+.mypy_cache
+.ruff_cache
+.pytest_cache
+*__pycache__*
+*.egg-info
+*.pyc
+
+# Machine specific
+.idea
+.vscode
+
+# Ignore .env files
+.env
+.envrc
+
+# ignore everything under the storage dir
+storage/**/*
+
+# ignore .local dir
+.local
+
+# ignore dist dir
+dist
+
+# ignore virtualenvs
+.venv
+venv*
+aienv*
+apienv*
+appenv*
+llmenv*
+
+.ipynb_checkpoints

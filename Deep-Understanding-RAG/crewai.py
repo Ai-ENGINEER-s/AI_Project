@@ -1,5 +1,5 @@
 import os
-from crewai import Agent, Task, Crew, Process
+from sample import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool
 
 os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY"

@@ -1,4 +1,4 @@
-from crewai import Task, Agent
+from sample import Task, Agent
 from textwrap import dedent
 
 

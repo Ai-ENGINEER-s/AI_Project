@@ -1,7 +1,7 @@
 import os
 from textwrap import dedent
 
-from crewai import Agent
+from sample import Agent
 from crewai_tools import ScrapeWebsiteTool, SerperDevTool
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI

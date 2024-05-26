@@ -1,4 +1,4 @@
-from crewai import Task
+from sample import Task
 from textwrap import dedent
 from agents import linkedin_scraper_agent, web_researcher_agent, doppelganger_agent
 
