@@ -43,3 +43,6 @@ FunClip/
 llm-os-project/ 
 
 aienv/
+streamlit_env/
+crewai_env/
+langflow_env/

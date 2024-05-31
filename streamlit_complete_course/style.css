@@ -1,0 +1,201 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+.main-header {
+    background: linear-gradient(to right, #007bff, #6c757d);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+    font-size: 4em;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.main-header p {
+    font-size: 1.5em;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+}
+
+.header-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.section {
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(to right, #95cdaf, #219f99);
+    padding: 10px 20px;
+    border-radius: 50%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section "À propos de moi" */
+.about {
+    background-color: white;
+}
+
+.about .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-left: 40px;
+}
+
+/* Section "Compétences" */
+.skills {
+    background-color: #f0f0f0;
+}
+
+.skills .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills ul {
+    font-size: 1.2em;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 40px;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+/* Section "Projets" */
+.projects {
+    background-color: white;
+}
+
+.project {
+    background-color: #f0f0f0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    width: 80%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 2em;
+    color: #2980b9;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #6dd5fa;
+}
+
+/* Section "Contact" */
+.contact {
+    background-color: #f0f0f0;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-icons a {
+    margin: 0 20px;
+    color: #2980b9;
+    font-size: 3em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #6dd5fa;
+    transform: scale(1.1);
+}
+
+/* Call to action */
+.cta {
+    background-color: #2980b9;
+    color: white;
+    padding: 70px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta button {
+    background-color: white;
+    color: #2980b9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #6dd5fa;
+    color: white;
+}
