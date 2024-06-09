@@ -46,3 +46,4 @@ aienv/
 streamlit_env/
 crewai_env/
 langflow_env/
+crewai_env/
