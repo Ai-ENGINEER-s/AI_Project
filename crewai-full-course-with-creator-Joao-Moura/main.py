@@ -8,8 +8,8 @@ warnings.filterwarnings('ignore')
 from IPython.display import Markdown
 
 load_dotenv()
-
-
+"https://learn.deeplearning.ai/accomplishments/2fd0815e-5af5-4932-ba60-f2f4b1e005fb?usp=sharing
+"
 api_key = os.getenv('COHERE_API_KEY')
 
 llm = ChatCohere(api_key=api_key)
